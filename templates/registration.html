@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+body{
+  font-family:sans-serif;
+  background: -webkit-linear-gradient(to right, #182848, #4b6cb7 );
+  background: linear-gradient(to right, #182848, #4b6cb7);
+  color:whitesmoke;
+  font-size: 25px;
+}
+h1{
+    text-align: center;
+}
+form{
+    width:75rem;
+    margin: auto;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 25px;
+}
+input[type=text], input[type=password]{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+  }
+button {
+    background-color: #4b6cb7;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+  }
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.headingsContainer{
+    text-align: center;
+}
+.headingsContainer p{
+    color: gray;
+}
+.mainContainer{
+    padding: 16px;
+}
+.subcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.subcontainer a{
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+span.forgotpsd a {
+    float: right;
+    color: whitesmoke;
+    padding-top: 16px;
+  }
+.forgotpsd a{
+    color: rgb(74, 146, 235);
+  }
+
+.forgotpsd a:link{
+    text-decoration: none;
+  }
+  .register{
+    color: white;
+    text-align: center;
+  }
+  .register a{
+    color: rgb(74, 146, 235);
+  }
+  .register a:link{
+    text-decoration: none;
+  }
+  /* Media queries for the responsiveness of the page */
+  @media screen and (max-width: 600px) {
+    form{
+      width: 25rem;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    form{
+      width: 20rem;
+    }
+  }
+  /* The container */
+.container {
+  display: row;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 32px;
+  cursor: pointer;
+  font-size: 32px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: white;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #182848;
+}
+ .register{
+    color: white;
+    text-align: center;
+  }
+
+  .register a{
+    color: rgb(74, 146, 235);
+  }
+
+  .register a:link{
+    text-decoration: none;
+  }
+a {
+  color:whitesmoke;
+}
+.newspaper {
+  column-count: 2;
+
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Home Page </title>
+
+</head>
+<body style="background-color:lightgrey">
+<div  style="column-gap: 60px;background color:CornflowerBlue;color:white;">
+<p style="text-align:center; font-size:50px;text-decoration: block;" > <u>Welcome to Registration Page</u></p>
+    <h2 style="text-align:center;color:red">{{result}}</h2>
+    <form action ="/user/registration" method="post">
+
+         <h1 style="text-align:centre;font-size:35px">Select :
+            <label class="container">Admin
+                <input type="radio" name="role" value="Admin"  >
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Guest
+              <input type="radio" name="role" checked="checked" value="Guest">
+              <span class="checkmark"></span>
+            </label>
+       </h1>
+
+    <div class="newspaper">
+        <label >First Name:</label>
+        <input type="text" placeholder="Enter First Name" name="firstname" required>
+        <label >Last Name:</label>
+        <input type="text" placeholder="Enter Last Name" name="lastname" required>
+        <label >Contact:</label>
+        <input type="text" placeholder="Enter Contact No" name="contact" required>
+        <label >Address:</label>
+        <input type="text" placeholder="Enter Your Address" name="address" required>
+        <label >DOB:</label>
+        <input type="text" placeholder="Enter Your DOB" name="dob" required>
+        <label >Age:</label>
+        <input type="text" placeholder="Enter Your Age " name="age" required>
+        <label >Email ID:</label>
+        <input type="text" placeholder="Enter Your Email ID" name="emailid" required>
+        <label class="small">Password:</label>
+        <input type="password" placeholder="Enter Your Password" name="password" required>
+        <label class="small">Confirm Password :</label>
+        <input type="password" placeholder="Enter Your Password Again" name="confirm_password" required><br></br>
+
+
+        <label style="margin-left:10px" >Gender: </label>
+        <select name="gender" required>
+            <option value="Male">Male</option>
+           <option value="Female">Female</option></select>
+
+        <label style="margin-left:30px"> Country: </label>
+        <Select name="country" required>
+        <option value=""></option>
+        <option value="India">India</option>
+        <option value="Canada">Canada</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option></select>
+
+        <label style="margin-left:30px" > City:  </label>
+        <Select name="city" required>
+            <option value=""></option>
+            <option value="Pune">Pune</option>
+            <option value="Dehli">Dehli</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Lucknow">Lucknow</option></select>
+    </div>
+
+    <h1 style="color:midnightblue; text-align:center;font-size:30px"><input type="Submit" style="font-size:30px; background-color:AliceBlue; color: midnightblue; width:140px;height:40px;"></h1>
+<!--        <p style="text-align:center;font-size:20px";>Already a member? <a href="/">Login Here</a></p>-->
+        <p class="register" style="font-size:20px">Already a member?  <a href="/">Login Here</a></p>
+
+    </form>
+
+</div>
+</body>
+</html>

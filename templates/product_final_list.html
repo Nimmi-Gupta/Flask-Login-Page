@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+body{
+  font-family:sans-serif;
+  background: -webkit-linear-gradient(to right, #182848, #4b6cb7 );
+  background: linear-gradient(to right, #182848, #4b6cb7);
+  color:whitesmoke;
+  font-size: 25px;
+}
+h1{
+    text-align: center;
+}
+form{
+    width:75rem;
+    margin: auto;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 25px;
+}
+input[type=text], input[type=password]{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+  }
+button {
+    background-color: #4b6cb7;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+  }
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.headingsContainer{
+    text-align: center;
+}
+.headingsContainer p{
+    color: gray;
+}
+.mainContainer{
+    padding: 16px;
+}
+.subcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.subcontainer a{
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+span.forgotpsd a {
+    float: right;
+    color: whitesmoke;
+    padding-top: 16px;
+  }
+.forgotpsd a{
+    color: rgb(74, 146, 235);
+  }
+
+.forgotpsd a:link{
+    text-decoration: none;
+  }
+  .register{
+    color: white;
+    text-align: center;
+  }
+  .register a{
+    color: rgb(74, 146, 235);
+  }
+  .register a:link{
+    text-decoration: none;
+  }
+  /* Media queries for the responsiveness of the page */
+  @media screen and (max-width: 600px) {
+    form{
+      width: 25rem;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    form{
+      width: 20rem;
+    }
+  }
+  /* The container */
+.container {
+  display: row;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 32px;
+  cursor: pointer;
+  font-size: 32px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: white;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #182848;
+}
+ .register{
+    color: white;
+    text-align: center;
+  }
+
+  .register a{
+    color: rgb(74, 146, 235);
+  }
+
+  .register a:link{
+    text-decoration: none;
+  }
+a {
+  color:whitesmoke;
+}
+.newspaper {
+  column-count: 2;
+  table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table,td, th {
+  border: 15px solid rgba(11, 15, 13, 0.582);
+  text-align: left;
+  padding: 10px;
+
+}
+
+tr:nth-child(even) {
+  background-color: grey;
+}
+
+.newspaper {
+  column-count: 2;
+
+}
+
+}
+table, th, td {
+  border: 3px solid white;
+
+
+}
+
+</style>
+    <meta charset="UTF-8">
+    <title>Product list </title>
+
+</head>
+<body style="background-color:lightgrey";>
+<div  style="column-gap: 60px;background color:CornflowerBlue;color:white;">
+<p style="text-align:center; font-size:50px;text-decoration: block;" > <u>List of Product</u></p>
+
+
+    <body style="background-color:lightgrey;">
+<!--<div  style="column-gap: 70px;background color:white;color:white;">-->
+<!--<p style="text-align:center; font-size:40px;text-decoration: block;" > <u>Product List</u></p>-->
+<!--    <h2 style="text-align:center;color:red";>{{result}}</h2>-->
+<!--    <form action ="/user/registration" method="post">-->
+
+    <div class="newspaper;">
+        <table style="width:100%">
+
+  <tr>
+<!--    <th style="text-align:center;" bgcolor="rgb(74, 146, 235)"><b>S.No</b></th>-->
+    <th style="text-align:center;" bgcolor="rgb(74, 146, 235) "><b>Product_Id</b></th>
+    <th style="text-align:center;" bgcolor="rgb(74, 146, 235) "><b>Product name</b></th>
+    <th style="text-align:center;" bgcolor="rgb(74, 146, 235) "><b>Product Price</b></th>
+    <th style="text-align:center;" bgcolor="rgb(74, 146, 235) "><b>Product Quantity</b></th>
+    <th style="text-align:center;" bgcolor="rgb(74, 146, 235) "><b>Product Vendor</b></th>
+    <th style="text-align:center;" bgcolor="rgb(74, 146, 235) "><b>Product Category</b></th>
+  </tr>
+    <tbody>
+        {%for prod in result1 %}
+        <tr>
+<!--            <td style="color:white;text-align:center" >{{prod.prod_S_NO}} </td>-->
+            <td style="color:white;text-align:center" >{{prod.product_id}} </td>
+            <td style="color:white;text-align:center" >{{prod.name}}</td>
+            <td style="color:white;text-align:center" >{{prod.price}}</td>
+            <td style="color:white;text-align:center">{{prod.quantity}}</td>
+            <td style="color:white;text-align:center">{{prod.vendor}}</td>
+            <td style="color:white;text-align:center">{{prod.category}}</td>
+        </tr>
+    {% endfor%}
+</tbody>
+</table>
+        </div>
+<h3 style="text-align:right;color:midnightblue; font-size:30px"><a href="/home_page">Back</a></h3>
+<h3 style="text-align:right;color:midnightblue; font-size:30px"><a href="/logout">Logout</a></h3>
+
+</div>
+
+</body>
+</body>
+</html>
